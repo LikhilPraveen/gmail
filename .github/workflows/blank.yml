@@ -26,17 +26,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
-        if: ${{ github.event_name == 'push_request' }}
         with:
           python-version: 3.8
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Output - ${{ steps.hello-world.outputs.random-number }}'
-            })
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint pytest
+          python send.py
           
       - name: Get Current Job Log URL
         uses: actions/setup-python@v2
