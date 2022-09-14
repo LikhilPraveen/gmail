@@ -34,9 +34,11 @@ jobs:
           python send.py
       - name: cli command
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
-          gh run view --job gmail --log
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          job_name: ${{ github.job }
+
+      - name: Output Current Job Log URL
+        run: echo ${{ steps.jobs.outputs.html_url }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
