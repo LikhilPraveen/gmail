@@ -8,7 +8,7 @@ import email.mime.application
 # create message
 msg = MIMEMultipart('alternative')
 msg['Subject'] = "Test Mail : ThePythonDjango.Com"
-msg['From'] = "chikkipapu@gmail.com"
+msg['From'] = "praveenkmca2020@gmail.com"
 msg['To'] = "chikkipapu@gmail.com"
 
 # create body
@@ -39,8 +39,8 @@ mail.starttls()
 recepient = [msg["To"]]
 
 # username and password of gmail id which will be used to send email
-username = "chikkipapu@gmail.com"
-password = "Mindtree@123"
+username = "praveenkmca2020@gmail.com"
+password = "uvsbpmumywgsvbza"
 
 # login using credentials
 mail.login(username, password)
