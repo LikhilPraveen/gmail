@@ -15,7 +15,7 @@ results = Run(['factorial.py'], do_exit=False)
 
 logging.info(results)
 
-final_score = Run([...], exit=False).linter.stats.global_note
+final_score = Run(['factorial.py'], exit=False).linter.stats.global_note
 
 logging.info(final_score)
 
