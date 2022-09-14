@@ -32,7 +32,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint pytest
-          python send.py > https://github.com/LikhilPraveen/gmail/blob/main/.github/workflows/mail.txt
+          python send.py > mail.txt
           
       - name: Get Current Job Log URL
         uses: actions/setup-python@v2
