@@ -1,15 +1,37 @@
-import sys
-from pylint import lint
-from typing import TextIO
+import argparse
+import logging
 from pylint.lint import Run
 
-THRESHOLD = 2
+logging.getLogger().setLevel(logging.INFO)
+
 def my_func():
-  default_stdout = sys.stdout
-  sys.stdout = type("Dummy", (TextIO,), {"write": lambda self, data: ()})()
-  score = Run(["./src"], exit=False).linter.stats.global_note
-  sys.stdout = default_stdout
-  print(score)
+  threshold = 2.0
+
+  logging.info('PyLint Starting | '
+             'Path: {} | '
+             'Threshold: {} '.format(path, threshold))
+
+  results = Run(['factorial.py'], do_exit=False)
+
+  final_score = results.linter.stats['global_note']
+
+  if final_score < threshold:
+
+      message = ('PyLint Failed | '
+               'Score: {} | '
+               'Threshold: {} '.format(final_score, threshold))
+
+      logging.error(message)
+      raise Exception(message)
+
+   else:
+      message = ('PyLint Passed | '
+               'Score: {} | '
+               'Threshold: {} '.format(final_score, threshold))
+
+      logging.info(message)
+
+      exit(0)
     
 if __name__ == '__main__':
     my_func()
