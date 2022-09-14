@@ -1,6 +1,7 @@
 import sys
 import argparse
 import logging
+import Exception
 from pylint.lint import Run
 
 
@@ -11,10 +12,6 @@ threshold = 5.0
 logging.info('PyLint Starting | '
              'Path: {} | '
              'Threshold: {} '.format('factorial.py', threshold))
-
-results = Run(['factorial.py'], do_exit=False)
-
-logging.info(results)
 
 final_score = Run(['factorial.py'], exit=False).linter.stats.global_note
 
