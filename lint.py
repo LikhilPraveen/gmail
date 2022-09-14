@@ -6,7 +6,7 @@ from pylint.lint import Run
 
 logging.getLogger().setLevel(logging.INFO)
 
-threshold = 5.0
+threshold = 8.0
 
 logging.info('PyLint Starting | '
              'Path: {} | '
