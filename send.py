@@ -14,7 +14,9 @@ msg['To'] = "chikkipapu@gmail.com"
 
 # create body
 html_text = '<div style="border:1px solid black">This is your message body in HTML format.</div>'
-plain_text = 'This is the sample mail'
+plain_text = lint.my_func()
+print("praveen")
+print(plain_text)
 
 # Create the body of the message (a plain-text and an HTML version).
 # Record the MIME types of both parts - text/plain and text/html.
