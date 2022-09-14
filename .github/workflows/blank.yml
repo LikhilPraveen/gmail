@@ -36,7 +36,7 @@ jobs:
           
       - name: Get Current Job Log URL
         run: |
-          gh run view ${{ github.run_id }} --log 
+          gh run view --job ${{ github.run_id }} --log 
         env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: ${{ github.job }}
