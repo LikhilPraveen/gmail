@@ -32,11 +32,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python send.py
-      - name: cli command
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          job_name: ${{ github.job }
-
+          
       - name: Output Current Job Log URL
         run: echo ${{ steps.jobs.outputs.html_url }}
 
