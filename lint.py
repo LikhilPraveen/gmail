@@ -1,3 +1,4 @@
+import sys
 import argparse
 import logging
 from pylint.lint import Run
