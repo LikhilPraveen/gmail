@@ -1,5 +1,6 @@
 import sys
 from pylint import lint
+from pylint.lint import Run
 
 THRESHOLD = 2
 def my_func():
