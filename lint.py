@@ -5,7 +5,7 @@ from pylint.lint import Run
 logging.getLogger().setLevel(logging.INFO)
 
 def my_func():
-  threshold = 2.0
+  threshold = 5.0
 
   results = Run(['factorial.py'], do_exit=False)
 
