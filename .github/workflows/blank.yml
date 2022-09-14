@@ -39,6 +39,7 @@ jobs:
             })
           
       - name: Get Current Job Log URL
+        uses: actions/setup-python@v2
         env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: ${{ github.job }}
