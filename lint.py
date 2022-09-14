@@ -7,10 +7,6 @@ logging.getLogger().setLevel(logging.INFO)
 def my_func():
   threshold = 2.0
 
-  logging.info('PyLint Starting | '
-             'Path: {} | '
-             'Threshold: {} '.format(path, threshold))
-
   results = Run(['factorial.py'], do_exit=False)
 
   final_score = results.linter.stats['global_note']
