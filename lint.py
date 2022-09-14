@@ -9,8 +9,8 @@ def my_func():
 
   results = Run(['factorial.py'], do_exit=False)
 
-  final_score = results.linter.stats['global_note']
-
+  final_score = Run(['factorial.py'], exit=False).linter.stats.global_note
+  
   if final_score < threshold:
 
       message = ('PyLint Failed | '
