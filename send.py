@@ -3,7 +3,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import email
 import email.mime.application
-from django.utils.html import strip_tags
+#from django.utils.html import strip_tags
 
 # create message
 msg = MIMEMultipart('alternative')
@@ -13,7 +13,7 @@ msg['To'] = "chikkipapu@gmail.com"
 
 # create body
 html_text = '<div style="border:1px solid black">This is your message body in HTML format.</div>'
-plain_text = strip_tags(html_text)
+#plain_text = strip_tags(html_text)
 
 # Create the body of the message (a plain-text and an HTML version).
 # Record the MIME types of both parts - text/plain and text/html.
