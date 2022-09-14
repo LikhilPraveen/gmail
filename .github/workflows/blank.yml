@@ -32,7 +32,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint pytest
-          python lint1.py > mail.txt
+          python lint.py > mail.txt
           python send.py 
       - name: Test with pytest
         run: |
