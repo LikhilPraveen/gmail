@@ -1,7 +1,6 @@
 import sys
 import argparse
 import logging
-import Exception
 from pylint.lint import Run
 
 
