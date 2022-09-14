@@ -24,7 +24,7 @@ def my_func():
       logging.error(message)
       raise Exception(message)
 
-   else:
+  else:
       message = ('PyLint Passed | '
                'Score: {} | '
                'Threshold: {} '.format(final_score, threshold))
