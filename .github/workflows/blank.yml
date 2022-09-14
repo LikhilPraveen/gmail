@@ -40,9 +40,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: ${{ github.job }}
           job_id: ${{ github.run_id }}
-          
-      - name: Output Current Job Log URL
-        run: echo ${{ steps.jobs.outputs.html_url }}
+          run: gh run view ${{ github.run_id }} --log 
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
