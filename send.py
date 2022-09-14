@@ -7,7 +7,7 @@ import email.mime.application
 
 # create message
 msg = MIMEMultipart('alternative')
-msg['Subject'] = "ERROR MESSAGE"
+msg['Subject'] = "ERROR MESSAGE FROM Pylint"
 msg['From'] = "praveenkmca2020@gmail.com"
 msg['To'] = "chikkipapu@gmail.com"
 
