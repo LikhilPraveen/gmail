@@ -13,7 +13,7 @@ logging.info('PyLint Starting | '
 
 results = Run(['factorial.py'], do_exit=False)
 
-final_score = Run(['factorial.py'], exit=False).linter.stats.global_note
+final_score = results(['factorial.py'], exit=False).linter.stats.global_note
 
 if final_score < threshold:
 
