@@ -33,6 +33,16 @@ jobs:
           python -m pip install --upgrade pip
           python send.py
           
+      - name: Get Current Job Log URL
+        uses: actions/setup-python@v2
+        id: jobs
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: ${{ github.job }
+
+      - name: Output Current Job Log URL
+        run: echo ${{ steps.jobs.outputs.html_url }}
+          
       - name: Output Current Job Log URL
         run: echo ${{ steps.jobs.outputs.html_url }}
 
