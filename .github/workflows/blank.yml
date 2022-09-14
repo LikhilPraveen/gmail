@@ -34,7 +34,9 @@ jobs:
           pip install pylint pytest
           python lint1.py > mail.txt
           python send.py 
-          
+      - name: Test with pytest
+        run: |
+          pytest pytest_test.py
       - name: Get Current Job Log URL
         uses: actions/setup-python@v2
         env:
