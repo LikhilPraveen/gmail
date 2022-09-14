@@ -7,7 +7,7 @@ import email.mime.application
 
 # create message
 msg = MIMEMultipart('alternative')
-msg['Subject'] = "Test Mail : ThePythonDjango.Com"
+msg['Subject'] = "ERROR MESSAGE"
 msg['From'] = "praveenkmca2020@gmail.com"
 msg['To'] = "chikkipapu@gmail.com"
 
