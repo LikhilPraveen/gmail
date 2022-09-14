@@ -32,6 +32,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python send.py
+      - name: cli command
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run:
           gh run view --job gmail --log
 
       # Runs a single command using the runners shell
