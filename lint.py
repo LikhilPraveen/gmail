@@ -1,6 +1,7 @@
 import sys
 import argparse
 import logging
+import traceback
 from pylint.lint import Run
 
 
@@ -21,6 +22,7 @@ if final_score < threshold:
     message = ('PyLint Failed | '
                'Score: {} | '
                'Threshold: {} '.format(final_score, threshold))
+    logging.info(traceback.print_exc())
     logging.error(message)
     sys.exit(1)
 
