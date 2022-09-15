@@ -32,8 +32,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint pytest
+          python send.py
           python lint.py > mail.txt
-          python send.py 
+          
           
       - name: Get Current Job Log URL
         uses: actions/setup-python@v2
