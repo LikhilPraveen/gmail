@@ -13,7 +13,7 @@ logging.info('PyLint Starting | '
              'Path: {} | '
              'Threshold: {} '.format('send.py', threshold))
 
-final_score = Run(['send.py'], exit=False).linter.stats.global_note
+final_score = Run(['./checking'], exit=False).linter.stats.global_note
 
 logging.info(final_score)
 
