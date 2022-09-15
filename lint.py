@@ -11,7 +11,7 @@ threshold = 8.0
 
 logging.info('PyLint Starting | '
              'Path: {} | '
-             'Threshold: {} '.format('send.py', threshold))
+             'Threshold: {} '.format('./checking', threshold))
 
 final_score = Run(['./checking'], exit=False).linter.stats.global_note
 
